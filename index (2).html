@@ -1,0 +1,82 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Journey Through Constantinople & Baghdad</title>
+  <style>
+    /* Basic style for the popup container */
+    #popupConstantinople, #popupBaghdad {
+      display: none;             /* hidden by default */
+      position: fixed;           /* stay in place even if user scrolls */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid #333;
+      background: #f9f9f9;
+      padding: 20px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    /* A simple close button style */
+    .close-btn {
+      background: #ccc;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      float: right;
+      margin-top: -10px;
+      margin-right: -10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Journey Through Constantinople & Baghdad</h1>
+  <p>Click the buttons below to learn more about my experiences in each city.</p>
+
+  <!-- Buttons to open popups -->
+  <button onclick="showPopup('popupConstantinople')">Experience in Constantinople</button>
+  <button onclick="showPopup('popupBaghdad')">Experience in Baghdad</button>
+
+  <!-- Popup for Constantinople -->
+  <div id="popupConstantinople">
+    <button class="close-btn" onclick="hidePopup('popupConstantinople')">&times;</button>
+    <h2>Constantinople</h2>
+    <p>
+      During my travels in Constantinople, I observed a bustling city at the crossroads 
+      of Europe and Asia. The famous Theodosian Walls still stand, 
+      and the Grand Bazaar buzzes with merchants from across the world...
+    </p>
+  </div>
+
+  <!-- Popup for Baghdad -->
+  <div id="popupBaghdad">
+    <button class="close-btn" onclick="hidePopup('popupBaghdad')">&times;</button>
+    <h2>Baghdad</h2>
+    <p>
+      My arrival in Baghdad was nothing short of captivating. The city, 
+      once the heart of the Islamic Golden Age, boasts stunning architecture, 
+      a rich literary heritage, and vibrant trade...
+    </p>
+  </div>
+
+  <script>
+    // Show the popup by ID
+    function showPopup(popupId) {
+      document.getElementById(popupId).style.display = 'block';
+    }
+
+    // Hide the popup by ID
+    function hidePopup(popupId) {
+      document.getElementById(popupId).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
